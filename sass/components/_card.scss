@@ -1,0 +1,66 @@
+.cards-title {
+  font-size: 2rem;
+  padding: 1rem 0 3rem 0;
+  right: 3rem;
+  &_focus {
+    color: $color-white;
+  }
+}
+.cards-cont {
+  position: relative;
+  right: 50%;
+  width: 90%;
+  height: 15rem;
+  transform: translate(60%);
+}
+.card {
+  align-items: center;
+
+  &_author {
+    color: $color-gray;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    &_focus {
+      color: $color-primary;
+    }
+  }
+  &_reviewed-by {
+    color: $color-gray;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    &_focus {
+      color: $color-primary;
+    }
+  }
+  &_img {
+    height: 26rem;
+    width: 19rem;
+  }
+  &_description {
+    font-size: 1.6rem;
+
+    &_focus {
+      color: $color-white;
+    }
+  }
+}
+
+.carousel {
+  //  background-color: hotpink;
+  height: 500px;
+}
+
+.back {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 200;
+  left: 0;
+}
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 200;
+  right: 0;
+}

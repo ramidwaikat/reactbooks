@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+
+  @include respond(tab) {  
+      font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  
+  @include respond(desk) {
+      font-size: 75%; //1rem = 12, 12/16
+  }
+}

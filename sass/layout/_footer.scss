@@ -1,0 +1,77 @@
+.footer {
+  background-color: $color-footer;
+  height: 80vh;
+  justify-content: space-around;
+  display: flex;
+  flex-flow: row;
+  grid-column: 1/-1;
+  grid-row: 7/-1;
+
+  // @include respond(phone) {
+  //   height: 100vh;
+  //   display: flex;
+  //   flex-flow: column;
+  // }
+
+  // @include respond(small-phone) {
+  //   height: 100vh;
+  //   display: flex;
+  //   flex-flow: column;
+  //   background-color: blueviolet;
+  // }
+
+  &__caption {
+    font-weight: 700;
+    color: $color-white;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 2rem;
+    text-align: left;
+  }
+
+  &__follow-us {
+    width: 30%;
+    @include respond(tab) {
+      width: 20%;
+    }
+    border-left: 1px solid $color-black;
+    // &_items {
+
+    // }
+  }
+
+  &__categories {
+    width: 32%;
+    border-left: 1px solid $color-black;
+    @include respond(tab) {
+      width: 50%;
+    }
+  }
+  &__navigation {
+    width: 10%;
+
+    border-left: 1px solid $color-black;
+    // &_items {
+
+    // }
+  }
+  &__inner-categories {
+    display: flex;
+    flex-flow: column;
+  }
+  &__categories-items {
+    column-count: 3;
+  }
+  &__link {
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: left;
+    color: $color-white;
+    padding: 1rem 0 0.8rem 2.5rem;
+
+    &__special {
+      color: $color-primary;
+    }
+  }
+}

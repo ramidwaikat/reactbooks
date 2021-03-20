@@ -1,0 +1,92 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  //  grid-template-columns: auto-fit ;
+  // grid-template-columns: repeat(8, 12.5rem);
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-rows: 10vh repeat(6, 80vh);
+  background-color: red;
+
+  @include respond(tab) {
+    // grid-template-columns: repeat(8, 12.5rem);
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-rows: 10vh 100vh repeat(5, 80vh);
+    background-color: yellow;
+  }
+  @include respond(desk) {
+    grid-template-columns: repeat(8, 16rem);
+    grid-template-rows: 10vh 100vh repeat(5, 80vh);
+    // background-color: hotpink;
+  }
+}
+.header {
+  background-color: $color-primary;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  display: flex;
+  flex-flow: row;
+}
+.categories-section {
+  width: 100%;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  background-color: $color-white;
+
+  &__caption {
+    font-size: 4rem;
+    // margin-left: -68rem;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    // background-color: yellow;
+
+    align-self: center;
+    // @include respond(tab) {
+    //   margin-left: -14rem;
+    //   padding-top: 3rem;
+    // }
+    // @include respond(desk) {
+    //   margin-left: -42rem;
+    //   padding-top: 3rem;
+    // }
+    // padding-bottom: 4rem;
+  }
+}
+
+.notification {
+  background-color: $color-section-gray;
+  grid-column: 1/-1;
+  grid-row: 3/4;
+}
+.fiction {
+  background-color: $color-black;
+  grid-column: 1/-1;
+  grid-row: 4/5;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../src/images/cover2.jpg");
+}
+.children {
+  background-color: $color-section-gray;
+  grid-column: 1/-1;
+  grid-row: 5/6;
+}
+.self-development {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../../src/images/cover1.jpg");
+
+  font-weight: 600;
+  grid-column: 1/-1;
+  grid-row: 6/7;
+  align-items: center;
+}
+.section-cards {
+  height: 100%;
+}
